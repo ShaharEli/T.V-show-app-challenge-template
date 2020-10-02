@@ -25,9 +25,11 @@ function Home() {
       
       
       */}
+      <div className="top-shows">
       {shows.map((show) => (
         <Show show={show} key={show.id} />
       ))}
+      </div>
     </div>
   );
 }
