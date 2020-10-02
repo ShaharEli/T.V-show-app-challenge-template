@@ -1,0 +1,31 @@
+.tv-show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    box-shadow: 0 5px 16px 0 rgba(255, 255, 255, 0.993),0 1px 7px 0 rgba(255, 255, 255, 0.993);
+    width:200px;
+    height: 360px;
+    background-color:#FAFBFC    
+}
+
+.link-to-one-show{
+    text-decoration: none;
+    color: black;
+}
+
+.tv-show:hover{
+    box-shadow: 0 10px 18px 0 rgba(255, 255, 255, 0.993),0 3px 20px 0 rgba(255, 255, 255, 0.993);
+}
+
+.show-img{
+    width: 100%;  
+    height: 77%;  
+}
+
+.show-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
