@@ -1,68 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# TV show app challenge
 
-## Available Scripts
+## Info
+---
 
-In the project directory, you can run:
+Welcome to our challenge! In this challenge we will test your abilities to create a simple react app and using API. Your task is to build a simple IMDB clone for TV shows.
 
-### `npm start`
+* The CSS will be provided to you. **Do not change it!**
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* You need to implement your code only where you asked to (you can see it in the comments inside the code).
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+* Some part of the code is already given. You can see in the comments links to read more about the features that we used.
 
-### `npm test`
+## Requirements
+---
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* In the home page you need to display top 20 TV shows when the search input is empty. You already have the `shows state` that related to the those shows. Use [this](https://www.episodate.com/api/most-popular) API.
 
-### `npm run build`
+* For every show you need to use the `Show` component. In this component, inside the `Link`, You will have to create a `div` with the class `tv-show`. Inside this `div` you need to create a `img` of the TV show thumbnail with the class `show-img` and beneath, a `h2` with the class `show-footer` header with the name of the TV show.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* After you finished the `Show` component, you will need to implement a `form` element in the `Home` component. The `form` will include `input` element with the id `search-bar` and `button` element with the id `submit-btn`.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* Every time that the form submitted you will need to display the search results from this  API: https://www.episodate.com/api/search?q= + the searched input. If the form submitted empty the home page need to display the popular tv shows again.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* After you finished the `Home` and the `Show` components tasks, you will need to fix the `OneShow` componenet, in this component you already got the id of the selected show and `Link` back to the `Home` page. 
 
-### `npm run eject`
+* Use this Api: https://www.episodate.com/api/show-details?q= + the show id
+to get the details of the show.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* Beneath the `Link` that we provided to you create `div` with the class `one-show-img-and-title`, in this `div`
+you will need to have `h2` with the show name, `img` with the class  `one-show-img` with the tv show img and 
+`div` with the class `one-show-footer`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* In the `one-show-footer` `div` you will need create `div` with the class `seasons` in this `div` you should have text that shows the number of seasons of the selected show, for example: 8 seasons.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* In the `one-show-footer` `div` you also will need to create `div` with the class `genres`. In this `div` you should have `span` for every genre of the selected show with the class `genre`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* In the `one-show-footer` `div` you also will need to create `div` with the class `rating`. In this `div` you should have `span` with the rating of the tv show with max length of three chars, for example: 9.8 (not 9.876).
+The class name of the `span` needs to be `green` if the tv show's rating greater than or equal to 8, else if the the tv show's rating greater than or equal to 6 the `class` needs to be `yellow` and if the rating is less than 6 the `class` needs to be `red`.
 
-## Learn More
+* In the `one-show-footer` `div` you will need create `div` with the class `show-status` in this `div` you should have `span` with the class `status`
+that shows the status of the show.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Beneath the `one-show-img-and-title` `div` you will need to create `div` with class `one-show-description`. In this `div` you will need to create `h2` with the text: description: .  Beneath the `h2` element you will have to display the selected show discription.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Testing
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+To test your code enter the shows folder than run `npm start` in your terminal and in another terminal run `npm run test`. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
