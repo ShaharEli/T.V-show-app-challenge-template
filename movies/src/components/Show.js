@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import './Show.css';
 function Show({ show }) {
   return (
-    <Link className="link-to-one-show" to={`/show/${show.id}`}>
+    <Link className='link-to-one-show' to={`/show/${show.id}`}>
       {/*
       
-      insert your code here 
+        insert your code here 
       
       
       */}
